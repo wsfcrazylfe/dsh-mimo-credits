@@ -1,0 +1,68 @@
+{
+  "name": "dsh-mimo-credits",
+  "version": "0.1.2",
+  "description": "Shows the remaining MiMo Token Plan credits as a progress bar at the left sidebar foot (above Settings), backed by the official credits-get API through an authenticated same-origin Host proxy, with API-key entry in Settings.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "wsfcrazylfe",
+    "url": "https://github.com/wsfcrazylfe"
+  },
+  "homepage": "https://github.com/wsfcrazylfe/dsh-mimo-credits#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsfcrazylfe/dsh-mimo-credits.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wsfcrazylfe/dsh-mimo-credits/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "mimo",
+    "xiaomi",
+    "credits",
+    "quota",
+    "token-plan",
+    "sidebar"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ]
+    },
+    "compatibility": {
+      "dsh": ">=0.2.2-rc.3 <0.3.0-0",
+      "dshReleases": {
+        "0.2.2-rc.3": "compatible"
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

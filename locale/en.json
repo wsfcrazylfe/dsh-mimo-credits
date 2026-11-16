@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MiMo plan credits",
+    "description": "Shows the remaining MiMo Token Plan credits as a progress bar at the left sidebar foot, above Settings (a centered percentage in the collapsed rail). The official credits-get API sends no CORS headers, so the Host half queries it through DSH's authenticated same-origin /api channel; the browser never holds the key. Configure the Token Plan API key (tp-...) in Settings > General, where it is stored in the DSH credential store, or export MIMO_API_KEY in the Host environment. The widget refreshes every 5 minutes and on click; the Host caches upstream answers for 60 seconds. Without a key it shows a dash and Settings > General explains what to add."
+  }
+}

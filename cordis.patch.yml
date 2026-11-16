@@ -1,0 +1,12 @@
+# The entry this plugin adds to a DSH profile.
+#
+# `insert:` is required: a bare row targets an *existing* entry by id, and the
+# loader would warn "entry not found" and carry on.
+#
+# Optional config (add a `config:` mapping under the row):
+#   baseUrl: https://token-plan-cn.xiaomimimo.com
+#     API root for the official 查询套餐余量 (credits-get) endpoint; the plugin
+#     appends /v1/platform/token_plan. Defaults to the public MiMo API root.
+- insert:
+    - id: mimo-credits
+      name: dsh-mimo-credits
